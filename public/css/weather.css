@@ -8,20 +8,20 @@
   position: absolute;
   top: -50px;
   left: -60px;
-  background: rgb(249, 165, 72);
+  background: rgb(74, 180, 212);
   border-radius: 20px;
   padding: 10px 20px;
   background: linear-gradient(
     90deg,
-    rgba(249, 165, 72, 1) 40%,
-    rgba(255, 231, 189, 1) 100%
+    rgb(82, 161, 207) 40%,
+    rgb(108, 147, 219) 100%
   );
 }
 .weather__content {
   position: relative;
   width: 500px;
   height: 70vh;
-  background-image: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722376/after_noon.png?compress=1&resize=800x600");
+  background-image: url("https://giaovienvietnam.com/hinh-anh-tieng-anh/wp-content/uploads/2018/02/hinh-anh-tieng-anh-cho-tre-chu-de-thoi-tiet-phan-2-9-495x400.jpg");
   background-size: cover;
 }
 .place {
