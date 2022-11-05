@@ -4,7 +4,7 @@ const getWeather = async (location) => {
   const access_key = "398076c0ae0a92cbd702be14820ba1ff";
   const url = `http://api.weatherstack.com/current?access_key=${access_key}&query=${location}`;
   try {
-    const res = await asyncRequest(url); //call api
+    const res = await asyncRequest(url); 
     console.log("🚀 ~ file: app.js ~ line 8 ~ getWeather ~ res", res);
     const data = JSON.parse(res.body);
     const weather = {
@@ -27,14 +27,14 @@ const getWeather = async (location) => {
 };
 // getWeather("tokyo");
 const express = require("express");
-const app = express(); //khoi tao ung dung
-const path = require("path"); // thu vien mac dinh cua nodejs
+const app = express(); 
+const path = require("path"); 
 //setup static file
-const pathPublic = path.join(__dirname, "./public"); //ket noi file app voi file public,__dirname: la duong dan tuyet doi chay den file dang code laf file app.js
+const pathPublic = path.join(__dirname, "./public"); 
 console.log("🚀 ~ file: app.js ~ line 32 ~ pathPublic", pathPublic);
 app.use(express.static(pathPublic));
 app.get("/", async (req, res) => {
-  const params = req.query; // lay gia tri cua nguoi dung nhap vao tren url
+  const params = req.query;
   console.log("🚀 ~ file: app.js ~ line 36 ~ app.get ~ params", params);
   const location = params.address;
   const weather = await getWeather(location);
@@ -53,8 +53,7 @@ app.get("/", async (req, res) => {
     res.render("weather", { status: false });
   }
 });
-app.set("view engine", "hbs"); // set up template engine
-//setup chay tren moi truong nao
+app.set("view engine", "hbs"); 
 const port = 7000;
 app.listen(port, () => {
   console.log(`app run on port:http://localhost:7000/`);
